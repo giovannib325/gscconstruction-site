@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery | GSC Construction</title>
+  <meta name="description" content="Project gallery: bathrooms, kitchens, basements, and renovations in the Denver metro area." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img class="brand__logo" src="assets/gsc-construction-logo.png" alt="GSC Construction" />
+    </a>
+
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="gallery.html" class="nav__link is-active">Gallery</a>
+      <a href="#contact" class="nav__link">Contact</a>
+      <a href="#contact" class="btn btn--primary">Request a Free Estimate</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="container">
+      <div class="page-head">
+        <h1>Project Gallery</h1>
+        <p>Browse bathrooms, kitchens, basements, flooring, and full renovations.</p>
+      </div>
+
+      <!-- Optional filter chips (simple, no backend) -->
+      <div class="chips" aria-label="Gallery filters">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="bathroom">Bathrooms</button>
+        <button class="chip" data-filter="kitchen">Kitchens</button>
+        <button class="chip" data-filter="basement">Basements</button>
+        <button class="chip" data-filter="flooring">Flooring</button>
+        <button class="chip" data-filter="other">Other</button>
+      </div>
+
+      <!-- Gallery grid -->
+      <div class="gallery" id="gallery">
+        <!-- ✅ Replace the src filenames with the exact ones in your assets folder -->
+        <!-- TIP: start by pasting 10–20, then add more -->
+
+        <figure class="g-item" data-category="kitchen">
+          <img src="assets/IMG_4564.JPEG" alt="Kitchen remodel" loading="lazy" />
+        </figure>
+
+        <figure class="g-item" data-category="bathroom">
+          <img src="assets/IMG_4565.JPEG" alt="Bathroom remodel" loading="lazy" />
+        </figure>
+
+        <figure class="g-item" data-category="basement">
+          <img src="assets/IMG_4566.JPEG" alt="Basement finishing" loading="lazy" />
+        </figure>
+
+        <figure class="g-item" data-category="flooring">
+          <img src="assets/IMG_4568.JPEG" alt="Flooring installation" loading="lazy" />
+        </figure>
+
+        <figure class="g-item" data-category="other">
+          <img src="assets/IMG_4569.JPEG" alt="Home renovation" loading="lazy" />
+        </figure>
+
+        <figure class="g-item" data-category="other">
+          <img src="assets/IMG_7878.JPEG" alt="Renovation detail" loading="lazy" />
+        </figure>
+
+        <figure class="g-item" data-category="other">
+          <img src="assets/IMG_9962.JPG" alt="Project photo" loading="lazy" />
+        </figure>
+
+        <!-- Add the rest of your images here the same way -->
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="cta" id="contact">
+      <div class="container cta__inner">
+        <div>
+          <h2>Want a free estimate?</h2>
+          <p>Tell us about your project and we’ll reach out with next steps.</p>
+        </div>
+        <a class="btn btn--primary" href="mailto:info@gscconstructioninc.com">Email Us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <img class="lightbox__img" id="lightboxImg" alt="" />
+  </div>
+
+  <script>
+    // Lightbox
+    const gallery = document.getElementById('gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    gallery.addEventListener('click', (e) => {
+      const img = e.target.closest('img');
+      if (!img) return;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt || 'Project photo';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    }
