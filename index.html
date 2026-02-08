@@ -1,1 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GSC Construction | Denver Remodeling</title>
+  <meta name="description" content="Bathrooms, kitchens, basements, flooring, and full home renovations in the Denver metro area. Request a free estimate." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="GSC Construction home">
+      <img class="brand__logo" src="assets/gsc-construction-logo.png" alt="GSC Construction logo" />
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav__link is-active">Home</a>
+      <a href="gallery.html" class="nav__link">Gallery</a>
+      <a href="quotation.html" class="nav__link">Get a Quote</a>
+      <a href="#contact" class="nav__link">Contact</a>
+      <a href="quotation.html" class="btn btn--primary">Request a Free Estimate</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">GSC Construction • Denver Metro</p>
+          <h1>Remodeling done right.</h1>
+          <p class="lead">
+            Bathrooms, kitchens, basements, flooring, and full home renovations—quality work, clear communication, and respect for your home.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="quotation.html">Request a Free Estimate</a>
+            <a class="btn btn--ghost" href="gallery.html">View Gallery</a>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">Locally owned</div>
+            <div class="trust__item">Clear timelines</div>
+            <div class="trust__item">Clean job sites</div>
+          </div>
+        </div>
+
+        <div class="hero__media" aria-label="Featured project photo">
+          <!-- Replace with one of your best images -->
+          <img src="assets/IMG_4564.JPEG" alt="Finished remodel project" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>High-quality remodeling with straightforward communication from start to finish.</p>
+        </div>
+
+        <div class="cards">
+          <a class="card" href="quotation.html">
+            <h3>Bathroom Remodels</h3>
+            <p>Modern, durable upgrades—tile, vanities, showers, and more.</p>
+          </a>
+          <a class="card" href="quotation.html">
+            <h3>Kitchen Remodels</h3>
+            <p>Cabinets, countertops, lighting, and layouts built for real life.</p>
+          </a>
+          <a class="card" href="quotation.html">
+            <h3>Basement Finishing</h3>
+            <p>Turn unused space into a room you actually want to use.</p>
+          </a>
+          <a class="card" href="quotation.html">
+            <h3>Flooring</h3>
+            <p>LVP, hardwood, tile—installed clean and properly.</p>
+          </a>
+          <a class="card" href="quotation.html">
+            <h3>General Renovations</h3>
+            <p>Trim, paint, drywall, repairs, and full refresh projects.</p>
+          </a>
+          <a class="card card--cta" href="gallery.html">
+            <h3>See the work</h3>
+            <p>Browse real project photos in the gallery.</p>
+            <span class="card__link">Open Gallery →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--alt">
+      <div class="container split">
+        <div class="split__media">
+          <!-- Replace with a strong before/after or finished space -->
+          <img src="assets/IMG_4565.JPEG" alt="Remodel project photo" loading="lazy" />
+        </div>
+        <div class="split__copy">
+          <p class="eyebrow">Why GSC</p>
+          <h2>Quality work. Honest communication.</h2>
+          <p>
+            GSC Construction is a locally owned remodeling company serving the Denver metro area.
+            From small upgrades to full renovations, we work closely with homeowners to deliver results on time and with clear expectations.
+          </p>
+
+          <ul class="bullets">
+            <li>Detailed estimates and clear scope</li>
+            <li>Respectful crews and clean job sites</li>
+            <li>Consistent updates from start to finish</li>
+          </ul>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="quotation.html">Get a Quote</a>
+            <a class="btn btn--ghost" href="gallery.html">View Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="cta" id="contact">
+      <div class="container cta__inner">
+        <div>
+          <h2>Ready to start your remodel?</h2>
+          <p>Reach out today—quotes are free.</p>
+          <p class="contact-lines">
+            <strong>Phone:</strong> <a href="tel:+17204298655">(720) 429-8655</a><br/>
+            <strong>Email:</strong> <a href="mailto:info@gscconstructioninc.com">info@gscconstructioninc.com</a><br/>
+            <strong>Location:</strong> Greenwood Village, CO 80111
+          </p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--primary" href="quotation.html">Request a Free Estimate</a>
+          <a class="btn btn--ghost" href="gallery.html">View Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> GSC Construction. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
